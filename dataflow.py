@@ -9,7 +9,7 @@ from apache_beam import DoFn, GroupByKey, io, ParDo, Pipeline, PTransform, Windo
 from apache_beam.options.pipeline_options import PipelineOptions
 from apache_beam.transforms.window import FixedWindows
 
-
+#test
 class GroupMessagesByFixedWindows(PTransform):
     """A composite transform that groups Pub/Sub messages based on publish time
     and outputs a list of tuples, each containing a message and its publish time.

@@ -13,7 +13,7 @@ jobs:
           IMAGE_NAME: samples/dataflow/streaming-beam
           GOOGLE_APPLICATION_CREDENTIALS: ${{ secrets.GKE_KEY }}
         id: kubeflow
-        uses: 'google-github-actions/setup-gcloud@v0'
+        uses: 'dataflow-continues@arboreal-cosmos-338023.iam.gserviceaccount.com'
         with:
           GOOGLE_APPLICATION_CREDENTIALS: ${{secrets.GKE_KEY}}
           IMAGE_TAG:  gcr.io/${{ secrets.GCP_PROJECT }}/${{env.IMAGE_NAME}}:121413313

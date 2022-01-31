@@ -4,15 +4,16 @@ on: push
 jobs:
   build-flex-template:
     name: Build the Dataflow flex template
-    runs-on: ubuntu-latest 
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@master
       - name: Build step
         env:
-          IMAGE_NAME: samples/dataflow/streaming-beam  
+          IMAGE_NAME: samples/dataflow/streaming-beam
           GOOGLE_APPLICATION_CREDENTIALS: ${{ secrets.GKE_KEY }}
-        uses: leonidaskl/Continuoues-Deployment-Dataflow@master
+        id: kubeflow
+        uses: 'google-github-actions/setup-gcloud@v0'
         with:
           GOOGLE_APPLICATION_CREDENTIALS: ${{secrets.GKE_KEY}}
           IMAGE_TAG:  gcr.io/${{ secrets.GCP_PROJECT }}/${{env.IMAGE_NAME}}:121413313

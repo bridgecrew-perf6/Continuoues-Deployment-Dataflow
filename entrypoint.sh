@@ -15,4 +15,4 @@ gcloud builds submit --tag "$INPUT_IMAGE_TAG" "$INPUT_DOCKERIMAGE_PATH"
 gcloud beta dataflow flex-template build $INPUT_TEMPLATE_PATH \
   --image "$INPUT_IMAGE_TAG" \
   --sdk-language "PYTHON" \
-  --metadata-file "$INPUT_METADATA_PATH"
+  #--metadata-file "$INPUT_METADATA_PATH"

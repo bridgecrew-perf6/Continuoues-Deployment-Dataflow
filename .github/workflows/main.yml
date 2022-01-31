@@ -20,3 +20,5 @@ jobs:
           TEMPLATE_PATH: gs://${{ secrets.GCP_BUCKET }}/dataflow/templates/streaming-beam.json
           METADATA_PATH: example/metadata.json
           GCP_PROJECT: ${{ secrets.GCP_PROJECT }}
+          
+          

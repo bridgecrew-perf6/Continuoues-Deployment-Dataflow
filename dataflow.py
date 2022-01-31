@@ -135,14 +135,13 @@ if __name__ == "__main__":
         pipeline_args,
     )
 
-# --project=jokr-global   
-# --region=europe-west4   
-# --input_topic=projects/jokr-global/topics/bringg-tasks   
-# --output_path=gs://jokr-bringg/tasks/   
-# --runner=DataflowRunner   
-# --window_size=20   
-# --num_shards=1 
-# --temp_location=gs://jokr-bringg/temp/  
-# --input_subscription=projects/jokr-global/subscriptions/bringg-tasks-datalake-feed 
+# --project=jokr-global
+# --region=europe-west4
+# --input_topic=projects/jokr-global/topics/bringg-tasks
+# --output_path=gs://jokr-bringg/tasks/
+# --runner=DataflowRunner
+# --window_size=20
+# --num_shards=1
+# --temp_location=gs://jokr-bringg/temp/
+# --input_subscription=projects/jokr-global/subscriptions/bringg-tasks-datalake-feed
 # --job_name=bringg-tasks-datalake-job
-# --service_account_email=streaming-service@jokr-global.iam.gserviceaccount.com
